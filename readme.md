@@ -1,5 +1,2 @@
-Automized checking if installed packages are mentioned in a CVE, written in python
-ToDo:
-- [ ] make callable via cli
-- [ ] add notifiation?
-- [ ] 
+# Security Checker
+checks installed packages and installes fixes when installed packages are affected
