@@ -1,0 +1,2213 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0<!DOCTYPE html>
+<html>
+	<head>
+		<title>Vulnerable issues - Arch Linux</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel='icon' href='/static/favicon.ico' />
+		<link rel='stylesheet' href='/static/normalize.css' type='text/css' media='all' />
+		<link rel='stylesheet' href='/static/style.css' type='text/css' media='all' />
+		<link href="/advisory/feed.atom" rel="alternate" title="Recent advisories" type="application/atom+xml">
+	</head>
+	<body>
+		<div id="archnavbar">
+			<div id="logo"><a href="https://archlinux.org" title="Return to the main page">Arch Linux</a></div>
+			<div id="archnavbarmenu">
+				<ul id="archnavbarlist">
+					<li id="anb-home"><a href="https://archlinux.org" title="Arch news, packages, projects and more">Home</a></li>
+					<li id="anb-packages"><a href="https://archlinux.org/packages/" title="Arch Package Database">Packages</a></li>
+					<li id="anb-forums"><a href="https://bbs.archlinux.org/" title="Community forums">Forums</a></li>
+					<li id="anb-wiki"><a href="https://wiki.archlinux.org/" title="Community documentation">Wiki</a></li>
+					<li id="anb-gitlab"><a href="https://gitlab.archlinux.org/" title="GitLab">GitLab</a></li>
+					<li id="anb-security"><a href="https://security.archlinux.org/" title="Arch Linux Security Tracker">Security</a></li>
+					<li id="anb-aur"><a href="https://aur.archlinux.org/" title="Arch Linux User Repository">AUR</a></li>
+					<li id="anb-download"><a href="https://archlinux.org/download/" title="Get Arch Linux">Download</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="navbar">
+				<ul>
+					<li><a href="/">issues</a></li>
+					<li><a href="/advisory">advisories</a></li>
+					<li><a href="/todo">todo</a></li>
+					<li><a href="/stats">stats</a></li>
+					<li><a href="/log">log</a></li>
+					<li><a href="/login" accesskey="l">login</a></li>
+				</ul>
+			</div>
+			<hr />
+			<h1>Issues</h1>
+			<div class="navbar">
+				<ul>
+					<li><b>vulnerable</b></li>
+					<li><a href="/issues/all">all</a></li>
+				</ul>
+			</div>
+			<div class="scroll-x">
+				<table class="styled-table full size">
+					<thead>
+						<tr>
+							<th>Group</th>
+							<th>Issue</th>
+							<th>Package</th>
+							<th>Affected</th>
+							<th>Fixed</th>
+							<th>Severity</th>
+							<th>Status</th>
+							<th>Ticket</th>
+							<th class="center">Advisory</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a href="/AVG-2843">AVG-2843</a></td>
+							<td>
+								<a href="/CVE-2023-0433">CVE-2023-0433</a><br />
+								<a href="/CVE-2023-0288">CVE-2023-0288</a><br />
+								<a href="/CVE-2023-0054">CVE-2023-0054</a><br />
+								<a href="/CVE-2023-0049">CVE-2023-0049</a><br />
+								<a href="/CVE-2022-47024">CVE-2022-47024</a><br />
+								<a href="/CVE-2022-3591">CVE-2022-3591</a><br />
+								<a href="/CVE-2022-3324">CVE-2022-3324</a><br />
+								<a href="/CVE-2022-3256">CVE-2022-3256</a><br />
+								<a href="/CVE-2022-3099">CVE-2022-3099</a><br />
+								<a href="/CVE-2022-2581">CVE-2022-2581</a><br />
+								<a href="/CVE-2022-2345">CVE-2022-2345</a><br />
+								<a href="/CVE-2022-0417">CVE-2022-0417</a><br />
+								<a href="/CVE-2022-0392">CVE-2022-0392</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/vim">vim</a></span>
+							</td>
+							<td>9.0.1224-1</td>
+							<td>9.0.1225-1</td>
+							<td><span class="purple">Unknown</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2842">AVG-2842</a></td>
+							<td>
+								<a href="/CVE-2022-48281">CVE-2022-48281</a><br />
+								<a href="/CVE-2022-3970">CVE-2022-3970</a><br />
+								<a href="/CVE-2022-3627">CVE-2022-3627</a><br />
+								<a href="/CVE-2022-3599">CVE-2022-3599</a><br />
+								<a href="/CVE-2022-3597">CVE-2022-3597</a><br />
+								<a href="/CVE-2022-3570">CVE-2022-3570</a><br />
+								<a href="/CVE-2022-34526">CVE-2022-34526</a><br />
+								<a href="/CVE-2022-2953">CVE-2022-2953</a><br />
+								<a href="/CVE-2022-2869">CVE-2022-2869</a><br />
+								<a href="/CVE-2022-2868">CVE-2022-2868</a><br />
+								<a href="/CVE-2022-2867">CVE-2022-2867</a><br />
+								<a href="/CVE-2022-2521">CVE-2022-2521</a><br />
+								<a href="/CVE-2022-2520">CVE-2022-2520</a><br />
+								<a href="/CVE-2022-2519">CVE-2022-2519</a><br />
+								<a href="/CVE-2022-2058">CVE-2022-2058</a><br />
+								<a href="/CVE-2022-2057">CVE-2022-2057</a><br />
+								<a href="/CVE-2022-2056">CVE-2022-2056</a><br />
+								<a href="/CVE-2022-1623">CVE-2022-1623</a><br />
+								<a href="/CVE-2022-1622">CVE-2022-1622</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/libtiff">libtiff</a></span>
+							</td>
+							<td>4.4.0-1</td>
+							<td></td>
+							<td><span class="purple">Unknown</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2827">AVG-2827</a></td>
+							<td>
+								<a href="/CVE-2022-1537">CVE-2022-1537</a><br />
+								<a href="/CVE-2022-0436">CVE-2022-0436</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/grunt-cli">grunt-cli</a></span>
+							</td>
+							<td>1.5.2-1</td>
+							<td>1.5.3-1</td>
+							<td><span class="purple">Unknown</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2820">AVG-2820</a></td>
+							<td>
+								<a href="/CVE-2022-32893">CVE-2022-32893</a><br />
+								<a href="/CVE-2022-32891">CVE-2022-32891</a><br />
+								<a href="/CVE-2022-32886">CVE-2022-32886</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/wpewebkit">wpewebkit</a></span>
+							</td>
+							<td>2.36.7-1</td>
+							<td>2.36.8-1</td>
+							<td><span class="purple">Unknown</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2818">AVG-2818</a></td>
+							<td>
+								<a href="/CVE-2022-32293">CVE-2022-32293</a><br />
+								<a href="/CVE-2022-32292">CVE-2022-32292</a><br />
+								<a href="/CVE-2022-23098">CVE-2022-23098</a><br />
+								<a href="/CVE-2022-23097">CVE-2022-23097</a><br />
+								<a href="/CVE-2022-23096">CVE-2022-23096</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/connman">connman</a></span>
+							</td>
+							<td>1.41-1</td>
+							<td></td>
+							<td><span class="purple">Unknown</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2816">AVG-2816</a></td>
+							<td>
+								<a href="/CVE-2022-41318">CVE-2022-41318</a><br />
+								<a href="/CVE-2022-41317">CVE-2022-41317</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/squid">squid</a></span>
+							</td>
+							<td>5.6-1</td>
+							<td>5.7-1</td>
+							<td><span class="purple">Unknown</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2809">AVG-2809</a></td>
+							<td>
+								<a href="/CVE-2022-41323">CVE-2022-41323</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/python-django">python-django</a></span>
+							</td>
+							<td>4.1-1</td>
+							<td>4.1.2-1</td>
+							<td><span class="purple">Unknown</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2799">AVG-2799</a></td>
+							<td>
+								<a href="/CVE-2022-0546">CVE-2022-0546</a><br />
+								<a href="/CVE-2022-0545">CVE-2022-0545</a><br />
+								<a href="/CVE-2022-0544">CVE-2022-0544</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/blender">blender</a></span>
+							</td>
+							<td>17:3.0.1-6</td>
+							<td>17:3.1.0-1</td>
+							<td><span class="purple">Unknown</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2781">AVG-2781</a></td>
+							<td>
+								<a href="/CVE-2022-29217">CVE-2022-29217</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/python-pyjwt">python-pyjwt</a></span>
+							</td>
+							<td>2.3.0-1</td>
+							<td>2.4.0-1</td>
+							<td><span class="purple">Unknown</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2780">AVG-2780</a></td>
+							<td>
+								<a href="/CVE-2022-26710">CVE-2022-26710</a><br />
+								<a href="/CVE-2022-22677">CVE-2022-22677</a><br />
+								<a href="/CVE-2022-22662">CVE-2022-22662</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/wpewebkit">wpewebkit</a></span>
+							</td>
+							<td>2.36.3-1</td>
+							<td>2.36.4-1</td>
+							<td><span class="purple">Unknown</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2725">AVG-2725</a></td>
+							<td>
+								<a href="/CVE-2022-23648">CVE-2022-23648</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/containerd">containerd</a></span>
+							</td>
+							<td>1.6.0-2</td>
+							<td>1.6.1-1</td>
+							<td><span class="purple">Unknown</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2836">AVG-2836</a></td>
+							<td>
+								<a href="/CVE-2023-25012">CVE-2023-25012</a><br />
+								<a href="/CVE-2023-23455">CVE-2023-23455</a><br />
+								<a href="/CVE-2023-23454">CVE-2023-23454</a><br />
+								<a href="/CVE-2023-0394">CVE-2023-0394</a><br />
+								<a href="/CVE-2023-0266">CVE-2023-0266</a><br />
+								<a href="/CVE-2023-0122">CVE-2023-0122</a><br />
+								<a href="/CVE-2022-47946">CVE-2022-47946</a><br />
+								<a href="/CVE-2022-47943">CVE-2022-47943</a><br />
+								<a href="/CVE-2022-47942">CVE-2022-47942</a><br />
+								<a href="/CVE-2022-47941">CVE-2022-47941</a><br />
+								<a href="/CVE-2022-47940">CVE-2022-47940</a><br />
+								<a href="/CVE-2022-47939">CVE-2022-47939</a><br />
+								<a href="/CVE-2022-47938">CVE-2022-47938</a><br />
+								<a href="/CVE-2022-47929">CVE-2022-47929</a><br />
+								<a href="/CVE-2022-43945">CVE-2022-43945</a><br />
+								<a href="/CVE-2022-4382">CVE-2022-4382</a><br />
+								<a href="/CVE-2022-4379">CVE-2022-4379</a><br />
+								<a href="/CVE-2022-4378">CVE-2022-4378</a><br />
+								<a href="/CVE-2022-43750">CVE-2022-43750</a><br />
+								<a href="/CVE-2022-42896">CVE-2022-42896</a><br />
+								<a href="/CVE-2022-42895">CVE-2022-42895</a><br />
+								<a href="/CVE-2022-42703">CVE-2022-42703</a><br />
+								<a href="/CVE-2022-42329">CVE-2022-42329</a><br />
+								<a href="/CVE-2022-41850">CVE-2022-41850</a><br />
+								<a href="/CVE-2022-41849">CVE-2022-41849</a><br />
+								<a href="/CVE-2022-41218">CVE-2022-41218</a><br />
+								<a href="/CVE-2022-40768">CVE-2022-40768</a><br />
+								<a href="/CVE-2022-40307">CVE-2022-40307</a><br />
+								<a href="/CVE-2022-39842">CVE-2022-39842</a><br />
+								<a href="/CVE-2022-3977">CVE-2022-3977</a><br />
+								<a href="/CVE-2022-3910">CVE-2022-3910</a><br />
+								<a href="/CVE-2022-36946">CVE-2022-36946</a><br />
+								<a href="/CVE-2022-36879">CVE-2022-36879</a><br />
+								<a href="/CVE-2022-3649">CVE-2022-3649</a><br />
+								<a href="/CVE-2022-3646">CVE-2022-3646</a><br />
+								<a href="/CVE-2022-3643">CVE-2022-3643</a><br />
+								<a href="/CVE-2022-3636">CVE-2022-3636</a><br />
+								<a href="/CVE-2022-3635">CVE-2022-3635</a><br />
+								<a href="/CVE-2022-36280">CVE-2022-36280</a><br />
+								<a href="/CVE-2022-3628">CVE-2022-3628</a><br />
+								<a href="/CVE-2022-3623">CVE-2022-3623</a><br />
+								<a href="/CVE-2022-3621">CVE-2022-3621</a><br />
+								<a href="/CVE-2022-3619">CVE-2022-3619</a><br />
+								<a href="/CVE-2022-3606">CVE-2022-3606</a><br />
+								<a href="/CVE-2022-3594">CVE-2022-3594</a><br />
+								<a href="/CVE-2022-3586">CVE-2022-3586</a><br />
+								<a href="/CVE-2022-3567">CVE-2022-3567</a><br />
+								<a href="/CVE-2022-3566">CVE-2022-3566</a><br />
+								<a href="/CVE-2022-3565">CVE-2022-3565</a><br />
+								<a href="/CVE-2022-3564">CVE-2022-3564</a><br />
+								<a href="/CVE-2022-3545">CVE-2022-3545</a><br />
+								<a href="/CVE-2022-3544">CVE-2022-3544</a><br />
+								<a href="/CVE-2022-3543">CVE-2022-3543</a><br />
+								<a href="/CVE-2022-3541">CVE-2022-3541</a><br />
+								<a href="/CVE-2022-3534">CVE-2022-3534</a><br />
+								<a href="/CVE-2022-3524">CVE-2022-3524</a><br />
+								<a href="/CVE-2022-34495">CVE-2022-34495</a><br />
+								<a href="/CVE-2022-34494">CVE-2022-34494</a><br />
+								<a href="/CVE-2022-3303">CVE-2022-3303</a><br />
+								<a href="/CVE-2022-3239">CVE-2022-3239</a><br />
+								<a href="/CVE-2022-32296">CVE-2022-32296</a><br />
+								<a href="/CVE-2022-3061">CVE-2022-3061</a><br />
+								<a href="/CVE-2022-3028">CVE-2022-3028</a><br />
+								<a href="/CVE-2022-2978">CVE-2022-2978</a><br />
+								<a href="/CVE-2022-2873">CVE-2022-2873</a><br />
+								<a href="/CVE-2022-2663">CVE-2022-2663</a><br />
+								<a href="/CVE-2022-2503">CVE-2022-2503</a><br />
+								<a href="/CVE-2022-2153">CVE-2022-2153</a><br />
+								<a href="/CVE-2022-1012">CVE-2022-1012</a><br />
+								<a href="/CVE-2022-0812">CVE-2022-0812</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/linux-zen">linux-zen</a></span>
+							</td>
+							<td>6.0.12-1</td>
+							<td>6.2-1</td>
+							<td><span class="orange">High</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2835">AVG-2835</a></td>
+							<td>
+								<a href="/CVE-2023-25012">CVE-2023-25012</a><br />
+								<a href="/CVE-2023-23455">CVE-2023-23455</a><br />
+								<a href="/CVE-2023-23454">CVE-2023-23454</a><br />
+								<a href="/CVE-2023-0394">CVE-2023-0394</a><br />
+								<a href="/CVE-2023-0266">CVE-2023-0266</a><br />
+								<a href="/CVE-2023-0122">CVE-2023-0122</a><br />
+								<a href="/CVE-2022-47946">CVE-2022-47946</a><br />
+								<a href="/CVE-2022-47943">CVE-2022-47943</a><br />
+								<a href="/CVE-2022-47942">CVE-2022-47942</a><br />
+								<a href="/CVE-2022-47941">CVE-2022-47941</a><br />
+								<a href="/CVE-2022-47940">CVE-2022-47940</a><br />
+								<a href="/CVE-2022-47939">CVE-2022-47939</a><br />
+								<a href="/CVE-2022-47938">CVE-2022-47938</a><br />
+								<a href="/CVE-2022-47929">CVE-2022-47929</a><br />
+								<a href="/CVE-2022-43945">CVE-2022-43945</a><br />
+								<a href="/CVE-2022-4382">CVE-2022-4382</a><br />
+								<a href="/CVE-2022-4379">CVE-2022-4379</a><br />
+								<a href="/CVE-2022-4378">CVE-2022-4378</a><br />
+								<a href="/CVE-2022-43750">CVE-2022-43750</a><br />
+								<a href="/CVE-2022-42896">CVE-2022-42896</a><br />
+								<a href="/CVE-2022-42895">CVE-2022-42895</a><br />
+								<a href="/CVE-2022-42703">CVE-2022-42703</a><br />
+								<a href="/CVE-2022-42329">CVE-2022-42329</a><br />
+								<a href="/CVE-2022-41850">CVE-2022-41850</a><br />
+								<a href="/CVE-2022-41849">CVE-2022-41849</a><br />
+								<a href="/CVE-2022-41218">CVE-2022-41218</a><br />
+								<a href="/CVE-2022-40768">CVE-2022-40768</a><br />
+								<a href="/CVE-2022-40307">CVE-2022-40307</a><br />
+								<a href="/CVE-2022-39842">CVE-2022-39842</a><br />
+								<a href="/CVE-2022-3977">CVE-2022-3977</a><br />
+								<a href="/CVE-2022-3910">CVE-2022-3910</a><br />
+								<a href="/CVE-2022-36946">CVE-2022-36946</a><br />
+								<a href="/CVE-2022-36879">CVE-2022-36879</a><br />
+								<a href="/CVE-2022-3649">CVE-2022-3649</a><br />
+								<a href="/CVE-2022-3646">CVE-2022-3646</a><br />
+								<a href="/CVE-2022-3643">CVE-2022-3643</a><br />
+								<a href="/CVE-2022-3636">CVE-2022-3636</a><br />
+								<a href="/CVE-2022-3635">CVE-2022-3635</a><br />
+								<a href="/CVE-2022-36280">CVE-2022-36280</a><br />
+								<a href="/CVE-2022-3628">CVE-2022-3628</a><br />
+								<a href="/CVE-2022-3623">CVE-2022-3623</a><br />
+								<a href="/CVE-2022-3621">CVE-2022-3621</a><br />
+								<a href="/CVE-2022-3619">CVE-2022-3619</a><br />
+								<a href="/CVE-2022-3606">CVE-2022-3606</a><br />
+								<a href="/CVE-2022-3594">CVE-2022-3594</a><br />
+								<a href="/CVE-2022-3586">CVE-2022-3586</a><br />
+								<a href="/CVE-2022-3567">CVE-2022-3567</a><br />
+								<a href="/CVE-2022-3566">CVE-2022-3566</a><br />
+								<a href="/CVE-2022-3565">CVE-2022-3565</a><br />
+								<a href="/CVE-2022-3564">CVE-2022-3564</a><br />
+								<a href="/CVE-2022-3545">CVE-2022-3545</a><br />
+								<a href="/CVE-2022-3544">CVE-2022-3544</a><br />
+								<a href="/CVE-2022-3543">CVE-2022-3543</a><br />
+								<a href="/CVE-2022-3541">CVE-2022-3541</a><br />
+								<a href="/CVE-2022-3534">CVE-2022-3534</a><br />
+								<a href="/CVE-2022-3524">CVE-2022-3524</a><br />
+								<a href="/CVE-2022-34495">CVE-2022-34495</a><br />
+								<a href="/CVE-2022-34494">CVE-2022-34494</a><br />
+								<a href="/CVE-2022-3303">CVE-2022-3303</a><br />
+								<a href="/CVE-2022-3239">CVE-2022-3239</a><br />
+								<a href="/CVE-2022-32296">CVE-2022-32296</a><br />
+								<a href="/CVE-2022-3061">CVE-2022-3061</a><br />
+								<a href="/CVE-2022-3028">CVE-2022-3028</a><br />
+								<a href="/CVE-2022-2978">CVE-2022-2978</a><br />
+								<a href="/CVE-2022-2873">CVE-2022-2873</a><br />
+								<a href="/CVE-2022-2663">CVE-2022-2663</a><br />
+								<a href="/CVE-2022-2503">CVE-2022-2503</a><br />
+								<a href="/CVE-2022-2153">CVE-2022-2153</a><br />
+								<a href="/CVE-2022-1012">CVE-2022-1012</a><br />
+								<a href="/CVE-2022-0812">CVE-2022-0812</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/linux-hardened">linux-hardened</a></span>
+							</td>
+							<td>6.0.19-1</td>
+							<td>6.2-1</td>
+							<td><span class="orange">High</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2834">AVG-2834</a></td>
+							<td>
+								<a href="/CVE-2023-25012">CVE-2023-25012</a><br />
+								<a href="/CVE-2023-23455">CVE-2023-23455</a><br />
+								<a href="/CVE-2023-23454">CVE-2023-23454</a><br />
+								<a href="/CVE-2023-0394">CVE-2023-0394</a><br />
+								<a href="/CVE-2023-0266">CVE-2023-0266</a><br />
+								<a href="/CVE-2023-0122">CVE-2023-0122</a><br />
+								<a href="/CVE-2022-47946">CVE-2022-47946</a><br />
+								<a href="/CVE-2022-47943">CVE-2022-47943</a><br />
+								<a href="/CVE-2022-47942">CVE-2022-47942</a><br />
+								<a href="/CVE-2022-47941">CVE-2022-47941</a><br />
+								<a href="/CVE-2022-47940">CVE-2022-47940</a><br />
+								<a href="/CVE-2022-47939">CVE-2022-47939</a><br />
+								<a href="/CVE-2022-47938">CVE-2022-47938</a><br />
+								<a href="/CVE-2022-47929">CVE-2022-47929</a><br />
+								<a href="/CVE-2022-43945">CVE-2022-43945</a><br />
+								<a href="/CVE-2022-4382">CVE-2022-4382</a><br />
+								<a href="/CVE-2022-4379">CVE-2022-4379</a><br />
+								<a href="/CVE-2022-4378">CVE-2022-4378</a><br />
+								<a href="/CVE-2022-43750">CVE-2022-43750</a><br />
+								<a href="/CVE-2022-42896">CVE-2022-42896</a><br />
+								<a href="/CVE-2022-42895">CVE-2022-42895</a><br />
+								<a href="/CVE-2022-42703">CVE-2022-42703</a><br />
+								<a href="/CVE-2022-42329">CVE-2022-42329</a><br />
+								<a href="/CVE-2022-41850">CVE-2022-41850</a><br />
+								<a href="/CVE-2022-41849">CVE-2022-41849</a><br />
+								<a href="/CVE-2022-41218">CVE-2022-41218</a><br />
+								<a href="/CVE-2022-40768">CVE-2022-40768</a><br />
+								<a href="/CVE-2022-40307">CVE-2022-40307</a><br />
+								<a href="/CVE-2022-39842">CVE-2022-39842</a><br />
+								<a href="/CVE-2022-3977">CVE-2022-3977</a><br />
+								<a href="/CVE-2022-3910">CVE-2022-3910</a><br />
+								<a href="/CVE-2022-36946">CVE-2022-36946</a><br />
+								<a href="/CVE-2022-36879">CVE-2022-36879</a><br />
+								<a href="/CVE-2022-3649">CVE-2022-3649</a><br />
+								<a href="/CVE-2022-3646">CVE-2022-3646</a><br />
+								<a href="/CVE-2022-3643">CVE-2022-3643</a><br />
+								<a href="/CVE-2022-3636">CVE-2022-3636</a><br />
+								<a href="/CVE-2022-3635">CVE-2022-3635</a><br />
+								<a href="/CVE-2022-36280">CVE-2022-36280</a><br />
+								<a href="/CVE-2022-3628">CVE-2022-3628</a><br />
+								<a href="/CVE-2022-3623">CVE-2022-3623</a><br />
+								<a href="/CVE-2022-3621">CVE-2022-3621</a><br />
+								<a href="/CVE-2022-3606">CVE-2022-3606</a><br />
+								<a href="/CVE-2022-3594">CVE-2022-3594</a><br />
+								<a href="/CVE-2022-3586">CVE-2022-3586</a><br />
+								<a href="/CVE-2022-3567">CVE-2022-3567</a><br />
+								<a href="/CVE-2022-3566">CVE-2022-3566</a><br />
+								<a href="/CVE-2022-3565">CVE-2022-3565</a><br />
+								<a href="/CVE-2022-3564">CVE-2022-3564</a><br />
+								<a href="/CVE-2022-3545">CVE-2022-3545</a><br />
+								<a href="/CVE-2022-3543">CVE-2022-3543</a><br />
+								<a href="/CVE-2022-3541">CVE-2022-3541</a><br />
+								<a href="/CVE-2022-3534">CVE-2022-3534</a><br />
+								<a href="/CVE-2022-3524">CVE-2022-3524</a><br />
+								<a href="/CVE-2022-34495">CVE-2022-34495</a><br />
+								<a href="/CVE-2022-34494">CVE-2022-34494</a><br />
+								<a href="/CVE-2022-3303">CVE-2022-3303</a><br />
+								<a href="/CVE-2022-3239">CVE-2022-3239</a><br />
+								<a href="/CVE-2022-32296">CVE-2022-32296</a><br />
+								<a href="/CVE-2022-3061">CVE-2022-3061</a><br />
+								<a href="/CVE-2022-3028">CVE-2022-3028</a><br />
+								<a href="/CVE-2022-2978">CVE-2022-2978</a><br />
+								<a href="/CVE-2022-2873">CVE-2022-2873</a><br />
+								<a href="/CVE-2022-2663">CVE-2022-2663</a><br />
+								<a href="/CVE-2022-2503">CVE-2022-2503</a><br />
+								<a href="/CVE-2022-2153">CVE-2022-2153</a><br />
+								<a href="/CVE-2022-1012">CVE-2022-1012</a><br />
+								<a href="/CVE-2022-0812">CVE-2022-0812</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/linux-lts">linux-lts</a></span>
+							</td>
+							<td>5.15.94-1</td>
+							<td>6.2-1</td>
+							<td><span class="orange">High</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2764">AVG-2764</a></td>
+							<td>
+								<a href="/CVE-2022-24790">CVE-2022-24790</a><br />
+								<a href="/CVE-2022-23634">CVE-2022-23634</a><br />
+								<a href="/CVE-2021-41136">CVE-2021-41136</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/ruby-puma">ruby-puma</a></span>
+							</td>
+							<td>5.6.3-1</td>
+							<td>5.6.4-1</td>
+							<td><span class="orange">High</span></td>
+							<td><span class="purple">Unknown</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2903">AVG-2903</a></td>
+							<td>
+								<a href="/CVE-2025-20260">CVE-2025-20260</a><br />
+								<a href="/CVE-2025-20234">CVE-2025-20234</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/clamav">clamav</a></span>
+							</td>
+							<td>1.4.2-2</td>
+							<td></td>
+							<td><span class="red">Critical</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2907">AVG-2907</a></td>
+							<td>
+								<a href="/CVE-2025-53367">CVE-2025-53367</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/djvulibre">djvulibre</a></span>
+							</td>
+							<td>3.5.28-6</td>
+							<td></td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2901">AVG-2901</a></td>
+							<td>
+								<a href="/CVE-2025-6020">CVE-2025-6020</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/pam">pam</a></span>
+							</td>
+							<td>1.7.0-2</td>
+							<td></td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2898">AVG-2898</a></td>
+							<td>
+								<a href="/CVE-2025-6170">CVE-2025-6170</a><br />
+								<a href="/CVE-2025-49796">CVE-2025-49796</a><br />
+								<a href="/CVE-2025-49795">CVE-2025-49795</a><br />
+								<a href="/CVE-2025-49794">CVE-2025-49794</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/libxml2">libxml2</a></span>
+							</td>
+							<td>2.14.4-1</td>
+							<td></td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2889">AVG-2889</a></td>
+							<td>
+								<a href="/CVE-2025-49125">CVE-2025-49125</a><br />
+								<a href="/CVE-2025-48988">CVE-2025-48988</a><br />
+								<a href="/CVE-2025-48976">CVE-2025-48976</a><br />
+								<a href="/CVE-2025-46701">CVE-2025-46701</a><br />
+								<a href="/CVE-2025-31650">CVE-2025-31650</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/tomcat9">tomcat9</a></span>
+							</td>
+							<td>9.0.100-1</td>
+							<td></td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2888">AVG-2888</a></td>
+							<td>
+								<a href="/CVE-2025-49125">CVE-2025-49125</a><br />
+								<a href="/CVE-2025-48988">CVE-2025-48988</a><br />
+								<a href="/CVE-2025-48976">CVE-2025-48976</a><br />
+								<a href="/CVE-2025-46701">CVE-2025-46701</a><br />
+								<a href="/CVE-2025-31650">CVE-2025-31650</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/tomcat10">tomcat10</a></span>
+							</td>
+							<td>10.1.40-1</td>
+							<td></td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2886">AVG-2886</a></td>
+							<td>
+								<a href="/CVE-2025-32803">CVE-2025-32803</a><br />
+								<a href="/CVE-2025-32802">CVE-2025-32802</a><br />
+								<a href="/CVE-2025-32801">CVE-2025-32801</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/kea">kea</a></span>
+							</td>
+							<td>2.6.2-1</td>
+							<td></td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2864">AVG-2864</a></td>
+							<td>
+								<a href="/CVE-2025-31257">CVE-2025-31257</a><br />
+								<a href="/CVE-2025-31215">CVE-2025-31215</a><br />
+								<a href="/CVE-2025-31206">CVE-2025-31206</a><br />
+								<a href="/CVE-2025-31205">CVE-2025-31205</a><br />
+								<a href="/CVE-2025-31204">CVE-2025-31204</a><br />
+								<a href="/CVE-2025-24223">CVE-2025-24223</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/webkit2gtk">webkit2gtk</a></span>
+							</td>
+							<td>2.48.2-1</td>
+							<td>2.49.1-1</td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2865">AVG-2865</a></td>
+							<td>
+								<a href="/CVE-2025-31257">CVE-2025-31257</a><br />
+								<a href="/CVE-2025-31215">CVE-2025-31215</a><br />
+								<a href="/CVE-2025-31206">CVE-2025-31206</a><br />
+								<a href="/CVE-2025-31205">CVE-2025-31205</a><br />
+								<a href="/CVE-2025-31204">CVE-2025-31204</a><br />
+								<a href="/CVE-2025-24223">CVE-2025-24223</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/webkit2gtk-4.1">webkit2gtk-4.1</a></span>
+							</td>
+							<td>2.48.2-1</td>
+							<td>2.49.1-1</td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2866">AVG-2866</a></td>
+							<td>
+								<a href="/CVE-2025-31257">CVE-2025-31257</a><br />
+								<a href="/CVE-2025-31215">CVE-2025-31215</a><br />
+								<a href="/CVE-2025-31206">CVE-2025-31206</a><br />
+								<a href="/CVE-2025-31205">CVE-2025-31205</a><br />
+								<a href="/CVE-2025-31204">CVE-2025-31204</a><br />
+								<a href="/CVE-2025-24223">CVE-2025-24223</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/webkitgtk-6.0">webkitgtk-6.0</a></span>
+							</td>
+							<td>2.48.2-1</td>
+							<td>2.49.1-1</td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2863">AVG-2863</a></td>
+							<td>
+								<a href="/CVE-2025-31257">CVE-2025-31257</a><br />
+								<a href="/CVE-2025-31215">CVE-2025-31215</a><br />
+								<a href="/CVE-2025-31206">CVE-2025-31206</a><br />
+								<a href="/CVE-2025-31205">CVE-2025-31205</a><br />
+								<a href="/CVE-2025-31204">CVE-2025-31204</a><br />
+								<a href="/CVE-2025-24223">CVE-2025-24223</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/wpewebkit">wpewebkit</a></span>
+							</td>
+							<td>2.48.2-1</td>
+							<td>2.49.1-1</td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2762">AVG-2762</a></td>
+							<td>
+								<a href="/CVE-2022-28737">CVE-2022-28737</a><br />
+								<a href="/CVE-2022-28736">CVE-2022-28736</a><br />
+								<a href="/CVE-2022-28735">CVE-2022-28735</a><br />
+								<a href="/CVE-2022-28734">CVE-2022-28734</a><br />
+								<a href="/CVE-2022-28733">CVE-2022-28733</a><br />
+								<a href="/CVE-2021-3697">CVE-2021-3697</a><br />
+								<a href="/CVE-2021-3696">CVE-2021-3696</a><br />
+								<a href="/CVE-2021-3695">CVE-2021-3695</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/grub">grub</a></span>
+							</td>
+							<td>2:2.06-5</td>
+							<td></td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2701">AVG-2701</a></td>
+							<td>
+								<a href="/CVE-2022-28390">CVE-2022-28390</a><br />
+								<a href="/CVE-2022-28389">CVE-2022-28389</a><br />
+								<a href="/CVE-2022-28388">CVE-2022-28388</a><br />
+								<a href="/CVE-2022-27666">CVE-2022-27666</a><br />
+								<a href="/CVE-2022-26490">CVE-2022-26490</a><br />
+								<a href="/CVE-2022-1516">CVE-2022-1516</a><br />
+								<a href="/CVE-2022-1353">CVE-2022-1353</a><br />
+								<a href="/CVE-2022-1205">CVE-2022-1205</a><br />
+								<a href="/CVE-2022-1204">CVE-2022-1204</a><br />
+								<a href="/CVE-2022-1199">CVE-2022-1199</a><br />
+								<a href="/CVE-2022-1198">CVE-2022-1198</a><br />
+								<a href="/CVE-2022-1195">CVE-2022-1195</a><br />
+								<a href="/CVE-2022-1158">CVE-2022-1158</a><br />
+								<a href="/CVE-2022-1048">CVE-2022-1048</a><br />
+								<a href="/CVE-2022-1016">CVE-2022-1016</a><br />
+								<a href="/CVE-2022-1015">CVE-2022-1015</a><br />
+								<a href="/CVE-2022-0168">CVE-2022-0168</a><br />
+								<a href="/CVE-2021-44879">CVE-2021-44879</a><br />
+								<a href="/CVE-2021-4197">CVE-2021-4197</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/linux-lts">linux-lts</a></span>
+							</td>
+							<td>5.15.14-1</td>
+							<td></td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2275">AVG-2275</a></td>
+							<td>
+								<a href="/CVE-2021-41259">CVE-2021-41259</a><br />
+								<a href="/CVE-2020-23171">CVE-2020-23171</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/nim">nim</a></span>
+							</td>
+							<td>1.4.8-1</td>
+							<td></td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2272">AVG-2272</a></td>
+							<td>
+								<a href="/CVE-2021-38371">CVE-2021-38371</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/exim">exim</a></span>
+							</td>
+							<td>4.95-2</td>
+							<td></td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2190">AVG-2190</a></td>
+							<td>
+								<a href="/CVE-2021-2388">CVE-2021-2388</a><br />
+								<a href="/CVE-2021-2369">CVE-2021-2369</a><br />
+								<a href="/CVE-2021-2341">CVE-2021-2341</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/jre8-openjdk-headless">jre8-openjdk-headless</a>, </span>
+								<span class="no-wrap"><a href="/package/jdk8-openjdk">jdk8-openjdk</a></span>
+							</td>
+							<td>8.u292-1</td>
+							<td></td>
+							<td><span class="orange">High</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2893">AVG-2893</a></td>
+							<td>
+								<a href="/CVE-2025-4598">CVE-2025-4598</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/systemd">systemd</a></span>
+							</td>
+							<td>257.6-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2885">AVG-2885</a></td>
+							<td>
+								<a href="/CVE-2025-5278">CVE-2025-5278</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/coreutils">coreutils</a></span>
+							</td>
+							<td>9.7-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2884">AVG-2884</a></td>
+							<td>
+								<a href="/CVE-2025-3454">CVE-2025-3454</a><br />
+								<a href="/CVE-2025-2703">CVE-2025-2703</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/grafana">grafana</a></span>
+							</td>
+							<td>11.6.1-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2875">AVG-2875</a></td>
+							<td>
+								<a href="/CVE-2025-4207">CVE-2025-4207</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/postgresql">postgresql</a></span>
+							</td>
+							<td>17.4-4</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2850">AVG-2850</a></td>
+							<td>
+								<a href="/CVE-2021-3575">CVE-2021-3575</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/openjpeg2">openjpeg2</a></span>
+							</td>
+							<td>2.5.0-3</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2765">AVG-2765</a></td>
+							<td>
+								<a href="/CVE-2022-2068">CVE-2022-2068</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/openssl">openssl</a></span>
+							</td>
+							<td>1.1.1.o-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2721">AVG-2721</a></td>
+							<td>
+								<a href="/CVE-2022-1355">CVE-2022-1355</a><br />
+								<a href="/CVE-2022-1354">CVE-2022-1354</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/libtiff">libtiff</a></span>
+							</td>
+							<td>4.3.0-2</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td><a href="https://bugs.archlinux.org/task/74772">FS#74772</a></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2683">AVG-2683</a></td>
+							<td>
+								<a href="/CVE-2022-0002">CVE-2022-0002</a><br />
+								<a href="/CVE-2022-0001">CVE-2022-0001</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/linux-lts">linux-lts</a></span>
+							</td>
+							<td>5.15.34-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2663">AVG-2663</a></td>
+							<td>
+								<a href="/CVE-2022-24801">CVE-2022-24801</a><br />
+								<a href="/CVE-2022-21716">CVE-2022-21716</a><br />
+								<a href="/CVE-2022-21712">CVE-2022-21712</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/python-twisted">python-twisted</a></span>
+							</td>
+							<td>21.7.0-4</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td><a href="https://bugs.archlinux.org/task/74362">FS#74362</a></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2646">AVG-2646</a></td>
+							<td>
+								<a href="/CVE-2021-43518">CVE-2021-43518</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/teeworlds">teeworlds</a></span>
+							</td>
+							<td>0.7.5-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2631">AVG-2631</a></td>
+							<td>
+								<a href="/CVE-2020-16154">CVE-2020-16154</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/cpanminus">cpanminus</a></span>
+							</td>
+							<td>1.7044-5</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2630">AVG-2630</a></td>
+							<td>
+								<a href="/CVE-2020-16156">CVE-2020-16156</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/perl">perl</a></span>
+							</td>
+							<td>5.34.0-3</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1881">AVG-1881</a></td>
+							<td>
+								<a href="/CVE-2021-43976">CVE-2021-43976</a><br />
+								<a href="/CVE-2021-4095">CVE-2021-4095</a><br />
+								<a href="/CVE-2021-4028">CVE-2021-4028</a><br />
+								<a href="/CVE-2021-3847">CVE-2021-3847</a><br />
+								<a href="/CVE-2021-3752">CVE-2021-3752</a><br />
+								<a href="/CVE-2021-3669">CVE-2021-3669</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/linux-hardened">linux-hardened</a></span>
+							</td>
+							<td>5.15.7.hardened1-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1880">AVG-1880</a></td>
+							<td>
+								<a href="/CVE-2021-43976">CVE-2021-43976</a><br />
+								<a href="/CVE-2021-4095">CVE-2021-4095</a><br />
+								<a href="/CVE-2021-4028">CVE-2021-4028</a><br />
+								<a href="/CVE-2021-3847">CVE-2021-3847</a><br />
+								<a href="/CVE-2021-3752">CVE-2021-3752</a><br />
+								<a href="/CVE-2021-3669">CVE-2021-3669</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/linux-zen">linux-zen</a></span>
+							</td>
+							<td>5.15.8.zen1-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1879">AVG-1879</a></td>
+							<td>
+								<a href="/CVE-2021-43976">CVE-2021-43976</a><br />
+								<a href="/CVE-2021-4095">CVE-2021-4095</a><br />
+								<a href="/CVE-2021-4028">CVE-2021-4028</a><br />
+								<a href="/CVE-2021-3847">CVE-2021-3847</a><br />
+								<a href="/CVE-2021-3752">CVE-2021-3752</a><br />
+								<a href="/CVE-2021-3669">CVE-2021-3669</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/linux">linux</a></span>
+							</td>
+							<td>5.15.8.arch1-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2616">AVG-2616</a></td>
+							<td>
+								<a href="/CVE-2021-44543">CVE-2021-44543</a><br />
+								<a href="/CVE-2021-44542">CVE-2021-44542</a><br />
+								<a href="/CVE-2021-44541">CVE-2021-44541</a><br />
+								<a href="/CVE-2021-44540">CVE-2021-44540</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/privoxy">privoxy</a></span>
+							</td>
+							<td>3.0.32-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1360">AVG-1360</a></td>
+							<td>
+								<a href="/CVE-2019-14560">CVE-2019-14560</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/edk2-shell">edk2-shell</a></span>
+							</td>
+							<td>202111-4</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2067">AVG-2067</a></td>
+							<td>
+								<a href="/CVE-2021-34555">CVE-2021-34555</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/opendmarc">opendmarc</a></span>
+							</td>
+							<td>1.4.1.1-2</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td><a href="https://bugs.archlinux.org/task/72812">FS#72812</a></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2576">AVG-2576</a></td>
+							<td>
+								<a href="/CVE-2021-21900">CVE-2021-21900</a><br />
+								<a href="/CVE-2021-21899">CVE-2021-21899</a><br />
+								<a href="/CVE-2021-21898">CVE-2021-21898</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/librecad">librecad</a></span>
+							</td>
+							<td>2.1.3-6</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2520">AVG-2520</a></td>
+							<td>
+								<a href="/CVE-2020-23109">CVE-2020-23109</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/libheif">libheif</a></span>
+							</td>
+							<td>1.12.0-2</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2493">AVG-2493</a></td>
+							<td>
+								<a href="/CVE-2021-22942">CVE-2021-22942</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/gitlab-gitaly">gitlab-gitaly</a></span>
+							</td>
+							<td>14.3.0-3</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2405">AVG-2405</a></td>
+							<td>
+								<a href="/CVE-2021-32294">CVE-2021-32294</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/libgig">libgig</a></span>
+							</td>
+							<td>4.3.0-3</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1823">AVG-1823</a></td>
+							<td>
+								<a href="/CVE-2021-36584">CVE-2021-36584</a><br />
+								<a href="/CVE-2021-33366">CVE-2021-33366</a><br />
+								<a href="/CVE-2021-33365">CVE-2021-33365</a><br />
+								<a href="/CVE-2021-33364">CVE-2021-33364</a><br />
+								<a href="/CVE-2021-33363">CVE-2021-33363</a><br />
+								<a href="/CVE-2021-33362">CVE-2021-33362</a><br />
+								<a href="/CVE-2021-33361">CVE-2021-33361</a><br />
+								<a href="/CVE-2021-32440">CVE-2021-32440</a><br />
+								<a href="/CVE-2021-32439">CVE-2021-32439</a><br />
+								<a href="/CVE-2021-32438">CVE-2021-32438</a><br />
+								<a href="/CVE-2021-32437">CVE-2021-32437</a><br />
+								<a href="/CVE-2021-32139">CVE-2021-32139</a><br />
+								<a href="/CVE-2021-32138">CVE-2021-32138</a><br />
+								<a href="/CVE-2021-32137">CVE-2021-32137</a><br />
+								<a href="/CVE-2021-32136">CVE-2021-32136</a><br />
+								<a href="/CVE-2021-32135">CVE-2021-32135</a><br />
+								<a href="/CVE-2021-32134">CVE-2021-32134</a><br />
+								<a href="/CVE-2021-32132">CVE-2021-32132</a><br />
+								<a href="/CVE-2021-31262">CVE-2021-31262</a><br />
+								<a href="/CVE-2021-31261">CVE-2021-31261</a><br />
+								<a href="/CVE-2021-31260">CVE-2021-31260</a><br />
+								<a href="/CVE-2021-31259">CVE-2021-31259</a><br />
+								<a href="/CVE-2021-31258">CVE-2021-31258</a><br />
+								<a href="/CVE-2021-31257">CVE-2021-31257</a><br />
+								<a href="/CVE-2021-31256">CVE-2021-31256</a><br />
+								<a href="/CVE-2021-31255">CVE-2021-31255</a><br />
+								<a href="/CVE-2021-31254">CVE-2021-31254</a><br />
+								<a href="/CVE-2021-30199">CVE-2021-30199</a><br />
+								<a href="/CVE-2021-30022">CVE-2021-30022</a><br />
+								<a href="/CVE-2021-30020">CVE-2021-30020</a><br />
+								<a href="/CVE-2021-30019">CVE-2021-30019</a><br />
+								<a href="/CVE-2021-30015">CVE-2021-30015</a><br />
+								<a href="/CVE-2021-30014">CVE-2021-30014</a><br />
+								<a href="/CVE-2021-29279">CVE-2021-29279</a><br />
+								<a href="/CVE-2021-28300">CVE-2021-28300</a><br />
+								<a href="/CVE-2021-21862">CVE-2021-21862</a><br />
+								<a href="/CVE-2021-21861">CVE-2021-21861</a><br />
+								<a href="/CVE-2021-21860">CVE-2021-21860</a><br />
+								<a href="/CVE-2021-21859">CVE-2021-21859</a><br />
+								<a href="/CVE-2021-21858">CVE-2021-21858</a><br />
+								<a href="/CVE-2021-21857">CVE-2021-21857</a><br />
+								<a href="/CVE-2021-21856">CVE-2021-21856</a><br />
+								<a href="/CVE-2021-21855">CVE-2021-21855</a><br />
+								<a href="/CVE-2021-21854">CVE-2021-21854</a><br />
+								<a href="/CVE-2021-21853">CVE-2021-21853</a><br />
+								<a href="/CVE-2021-21852">CVE-2021-21852</a><br />
+								<a href="/CVE-2021-21851">CVE-2021-21851</a><br />
+								<a href="/CVE-2021-21850">CVE-2021-21850</a><br />
+								<a href="/CVE-2021-21849">CVE-2021-21849</a><br />
+								<a href="/CVE-2021-21848">CVE-2021-21848</a><br />
+								<a href="/CVE-2021-21847">CVE-2021-21847</a><br />
+								<a href="/CVE-2021-21846">CVE-2021-21846</a><br />
+								<a href="/CVE-2021-21845">CVE-2021-21845</a><br />
+								<a href="/CVE-2021-21844">CVE-2021-21844</a><br />
+								<a href="/CVE-2021-21843">CVE-2021-21843</a><br />
+								<a href="/CVE-2021-21842">CVE-2021-21842</a><br />
+								<a href="/CVE-2021-21841">CVE-2021-21841</a><br />
+								<a href="/CVE-2021-21840">CVE-2021-21840</a><br />
+								<a href="/CVE-2021-21839">CVE-2021-21839</a><br />
+								<a href="/CVE-2021-21838">CVE-2021-21838</a><br />
+								<a href="/CVE-2021-21837">CVE-2021-21837</a><br />
+								<a href="/CVE-2021-21836">CVE-2021-21836</a><br />
+								<a href="/CVE-2021-21835">CVE-2021-21835</a><br />
+								<a href="/CVE-2021-21834">CVE-2021-21834</a><br />
+								<a href="/CVE-2020-35982">CVE-2020-35982</a><br />
+								<a href="/CVE-2020-35981">CVE-2020-35981</a><br />
+								<a href="/CVE-2020-35980">CVE-2020-35980</a><br />
+								<a href="/CVE-2020-35979">CVE-2020-35979</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/gpac">gpac</a></span>
+							</td>
+							<td>1:1.0.1-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2394">AVG-2394</a></td>
+							<td>
+								<a href="/CVE-2020-8561">CVE-2020-8561</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/kube-apiserver">kube-apiserver</a></span>
+							</td>
+							<td>1.23.0-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2367">AVG-2367</a></td>
+							<td>
+								<a href="/CVE-2021-3773">CVE-2021-3773</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/openvpn">openvpn</a></span>
+							</td>
+							<td>2.5.5-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2345">AVG-2345</a></td>
+							<td>
+								<a href="/CVE-2021-31615">CVE-2021-31615</a><br />
+								<a href="/CVE-2020-26560">CVE-2020-26560</a><br />
+								<a href="/CVE-2020-26559">CVE-2020-26559</a><br />
+								<a href="/CVE-2020-26557">CVE-2020-26557</a><br />
+								<a href="/CVE-2020-26556">CVE-2020-26556</a><br />
+								<a href="/CVE-2020-26555">CVE-2020-26555</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/linux">linux</a></span>
+							</td>
+							<td>5.15.8.arch1-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1427">AVG-1427</a></td>
+							<td>
+								<a href="/CVE-2021-30472">CVE-2021-30472</a><br />
+								<a href="/CVE-2021-30471">CVE-2021-30471</a><br />
+								<a href="/CVE-2021-30470">CVE-2021-30470</a><br />
+								<a href="/CVE-2021-30469">CVE-2021-30469</a><br />
+								<a href="/CVE-2020-18972">CVE-2020-18972</a><br />
+								<a href="/CVE-2020-18971">CVE-2020-18971</a><br />
+								<a href="/CVE-2019-20093">CVE-2019-20093</a><br />
+								<a href="/CVE-2019-10723">CVE-2019-10723</a><br />
+								<a href="/CVE-2018-8002">CVE-2018-8002</a><br />
+								<a href="/CVE-2018-20797">CVE-2018-20797</a><br />
+								<a href="/CVE-2018-12983">CVE-2018-12983</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/podofo">podofo</a></span>
+							</td>
+							<td>0.9.7-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2313">AVG-2313</a></td>
+							<td>
+								<a href="/CVE-2021-35940">CVE-2021-35940</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/apr">apr</a></span>
+							</td>
+							<td>1.7.0-3</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2142">AVG-2142</a></td>
+							<td>
+								<a href="/CVE-2020-28598">CVE-2020-28598</a><br />
+								<a href="/CVE-2020-28594">CVE-2020-28594</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/prusa-slicer">prusa-slicer</a></span>
+							</td>
+							<td>2.3.3-3</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2264">AVG-2264</a></td>
+							<td>
+								<a href="/CVE-2021-36770">CVE-2021-36770</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/perl">perl</a></span>
+							</td>
+							<td>5.34.0-3</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2262">AVG-2262</a></td>
+							<td>
+								<a href="/CVE-2021-38185">CVE-2021-38185</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/cpio">cpio</a></span>
+							</td>
+							<td>2.13-2</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1941">AVG-1941</a></td>
+							<td>
+								<a href="/CVE-2021-3681">CVE-2021-3681</a><br />
+								<a href="/CVE-2021-3620">CVE-2021-3620</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/ansible-core">ansible-core</a></span>
+							</td>
+							<td>2.12.1-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2186">AVG-2186</a></td>
+							<td>
+								<a href="/CVE-2021-3246">CVE-2021-3246</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/lib32-libsndfile">lib32-libsndfile</a></span>
+							</td>
+							<td>1.0.31-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2117">AVG-2117</a></td>
+							<td>
+								<a href="/CVE-2020-36405">CVE-2020-36405</a><br />
+								<a href="/CVE-2020-36404">CVE-2020-36404</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/keystone">keystone</a></span>
+							</td>
+							<td>0.9.2-2</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2114">AVG-2114</a></td>
+							<td>
+								<a href="/CVE-2021-35958">CVE-2021-35958</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/tensorflow">tensorflow</a></span>
+							</td>
+							<td>2.7.0-4</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2111">AVG-2111</a></td>
+							<td>
+								<a href="/CVE-2021-3624">CVE-2021-3624</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/dcraw">dcraw</a></span>
+							</td>
+							<td>9.28.0-2</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2102">AVG-2102</a></td>
+							<td>
+								<a href="/CVE-2021-3618">CVE-2021-3618</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/nginx">nginx</a></span>
+							</td>
+							<td>1.20.2-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2101">AVG-2101</a></td>
+							<td>
+								<a href="/CVE-2021-3618">CVE-2021-3618</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/vsftpd">vsftpd</a></span>
+							</td>
+							<td>3.0.3-7</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2100">AVG-2100</a></td>
+							<td>
+								<a href="/CVE-2021-33844">CVE-2021-33844</a><br />
+								<a href="/CVE-2021-23210">CVE-2021-23210</a><br />
+								<a href="/CVE-2021-23172">CVE-2021-23172</a><br />
+								<a href="/CVE-2021-23159">CVE-2021-23159</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/sox">sox</a></span>
+							</td>
+							<td>14.4.2-7</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2048">AVG-2048</a></td>
+							<td>
+								<a href="/CVE-2021-34342">CVE-2021-34342</a><br />
+								<a href="/CVE-2021-34341">CVE-2021-34341</a><br />
+								<a href="/CVE-2021-34340">CVE-2021-34340</a><br />
+								<a href="/CVE-2021-34339">CVE-2021-34339</a><br />
+								<a href="/CVE-2021-34338">CVE-2021-34338</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/ming">ming</a></span>
+							</td>
+							<td>0.4.8.r68.g04aee523-3</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2014">AVG-2014</a></td>
+							<td>
+								<a href="/CVE-2021-33560">CVE-2021-33560</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/lib32-libgcrypt15">lib32-libgcrypt15</a></span>
+							</td>
+							<td>1.5.6-5</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2013">AVG-2013</a></td>
+							<td>
+								<a href="/CVE-2021-33560">CVE-2021-33560</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/libgcrypt15">libgcrypt15</a></span>
+							</td>
+							<td>1.5.6-4</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1977">AVG-1977</a></td>
+							<td>
+								<a href="/CVE-2021-33481">CVE-2021-33481</a><br />
+								<a href="/CVE-2021-33480">CVE-2021-33480</a><br />
+								<a href="/CVE-2021-33479">CVE-2021-33479</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/gocr">gocr</a></span>
+							</td>
+							<td>0.52-2</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1676">AVG-1676</a></td>
+							<td>
+								<a href="/CVE-2021-30501">CVE-2021-30501</a><br />
+								<a href="/CVE-2021-30500">CVE-2021-30500</a><br />
+								<a href="/CVE-2021-20285">CVE-2021-20285</a><br />
+								<a href="/CVE-2020-24119">CVE-2020-24119</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/upx">upx</a></span>
+							</td>
+							<td>3.96-2</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1957">AVG-1957</a></td>
+							<td>
+								<a href="/CVE-2021-33026">CVE-2021-33026</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/python-flask-caching">python-flask-caching</a></span>
+							</td>
+							<td>1.10.1-3</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1486">AVG-1486</a></td>
+							<td>
+								<a href="/CVE-2021-3195">CVE-2021-3195</a><br />
+								<a href="/CVE-2021-31876">CVE-2021-31876</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/bitcoin-daemon">bitcoin-daemon</a></span>
+							</td>
+							<td>22.0-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1892">AVG-1892</a></td>
+							<td>
+								<a href="/CVE-2021-31879">CVE-2021-31879</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/wget">wget</a></span>
+							</td>
+							<td>1.21.3-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1855">AVG-1855</a></td>
+							<td>
+								<a href="/CVE-2020-23922">CVE-2020-23922</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/giflib">giflib</a></span>
+							</td>
+							<td>5.2.1-2</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1782">AVG-1782</a></td>
+							<td>
+								<a href="/CVE-2021-30184">CVE-2021-30184</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/gnuchess">gnuchess</a></span>
+							</td>
+							<td>6.2.9-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1628">AVG-1628</a></td>
+							<td>
+								<a href="/CVE-2021-3420">CVE-2021-3420</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/riscv32-elf-newlib">riscv32-elf-newlib</a></span>
+							</td>
+							<td>3.3.0-2</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td><a href="https://bugs.archlinux.org/task/70050">FS#70050</a></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1516">AVG-1516</a></td>
+							<td>
+								<a href="/CVE-2021-3349">CVE-2021-3349</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/evolution">evolution</a></span>
+							</td>
+							<td>3.42.2-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1420">AVG-1420</a></td>
+							<td>
+								<a href="/CVE-2020-27748">CVE-2020-27748</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/xdg-utils">xdg-utils</a></span>
+							</td>
+							<td>1.1.3+19+g9816ebb-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1346">AVG-1346</a></td>
+							<td>
+								<a href="/CVE-2020-35132">CVE-2020-35132</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/phpldapadmin">phpldapadmin</a></span>
+							</td>
+							<td>1.2.6.2-2</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1354">AVG-1354</a></td>
+							<td>
+								<a href="/CVE-2018-1311">CVE-2018-1311</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/xerces-c">xerces-c</a></span>
+							</td>
+							<td>3.2.3-5</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1342">AVG-1342</a></td>
+							<td>
+								<a href="/CVE-2020-28086">CVE-2020-28086</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/pass">pass</a></span>
+							</td>
+							<td>1.7.4-1</td>
+							<td></td>
+							<td><span class="light_orange">Medium</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2904">AVG-2904</a></td>
+							<td>
+								<a href="/CVE-2025-4563">CVE-2025-4563</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/kube-apiserver">kube-apiserver</a></span>
+							</td>
+							<td>1.33.1-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2890">AVG-2890</a></td>
+							<td>
+								<a href="/CVE-2025-40909">CVE-2025-40909</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/perl">perl</a></span>
+							</td>
+							<td>5.40.2-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2882">AVG-2882</a></td>
+							<td>
+								<a href="/CVE-2025-4575">CVE-2025-4575</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/openssl">openssl</a></span>
+							</td>
+							<td>3.5.0-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2880">AVG-2880</a></td>
+							<td>
+								<a href="/CVE-2025-46394">CVE-2025-46394</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/busybox">busybox</a></span>
+							</td>
+							<td>1.36.1-2</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2569">AVG-2569</a></td>
+							<td>
+								<a href="/CVE-2021-43668">CVE-2021-43668</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/go-ethereum">go-ethereum</a></span>
+							</td>
+							<td>1.10.13-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1311">AVG-1311</a></td>
+							<td>
+								<a href="/CVE-2020-11867">CVE-2020-11867</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/audacity">audacity</a></span>
+							</td>
+							<td>1:2.4.1-4</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2644">AVG-2644</a></td>
+							<td>
+								<a href="/CVE-2021-4110">CVE-2021-4110</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/mruby">mruby</a></span>
+							</td>
+							<td>3.0.0-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2615">AVG-2615</a></td>
+							<td>
+								<a href="/CVE-2021-43809">CVE-2021-43809</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/ruby-bundler">ruby-bundler</a></span>
+							</td>
+							<td>2.2.26-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1302">AVG-1302</a></td>
+							<td>
+								<a href="/CVE-2021-43519">CVE-2021-43519</a><br />
+								<a href="/CVE-2014-5461">CVE-2014-5461</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/lua51">lua51</a></span>
+							</td>
+							<td>5.1.5-9</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td><a href="https://bugs.archlinux.org/task/68703">FS#68703</a></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2537">AVG-2537</a></td>
+							<td>
+								<a href="/CVE-2021-43519">CVE-2021-43519</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/lua52">lua52</a></span>
+							</td>
+							<td>5.2.4-5</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2536">AVG-2536</a></td>
+							<td>
+								<a href="/CVE-2021-43519">CVE-2021-43519</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/lua53">lua53</a></span>
+							</td>
+							<td>5.3.6-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2404">AVG-2404</a></td>
+							<td>
+								<a href="/CVE-2021-32275">CVE-2021-32275</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/faust">faust</a></span>
+							</td>
+							<td>2.37.3-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2372">AVG-2372</a></td>
+							<td>
+								<a href="/CVE-2021-40839">CVE-2021-40839</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/python-rencode">python-rencode</a></span>
+							</td>
+							<td>1.0.6-7</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1594">AVG-1594</a></td>
+							<td>
+								<a href="/CVE-2020-35501">CVE-2020-35501</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/linux">linux</a></span>
+							</td>
+							<td>5.15.8.arch1-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center">None</td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2325">AVG-2325</a></td>
+							<td>
+								<a href="/CVE-2020-18974">CVE-2020-18974</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/nasm">nasm</a></span>
+							</td>
+							<td>2.15.05-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2254">AVG-2254</a></td>
+							<td>
+								<a href="/CVE-2020-24827">CVE-2020-24827</a><br />
+								<a href="/CVE-2020-24826">CVE-2020-24826</a><br />
+								<a href="/CVE-2020-24825">CVE-2020-24825</a><br />
+								<a href="/CVE-2020-24824">CVE-2020-24824</a><br />
+								<a href="/CVE-2020-24823">CVE-2020-24823</a><br />
+								<a href="/CVE-2020-24822">CVE-2020-24822</a><br />
+								<a href="/CVE-2020-24821">CVE-2020-24821</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/libelfin">libelfin</a></span>
+							</td>
+							<td>0.3-2</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2207">AVG-2207</a></td>
+							<td>
+								<a href="/CVE-2020-25691">CVE-2020-25691</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/darkhttpd">darkhttpd</a></span>
+							</td>
+							<td>1.13-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1915">AVG-1915</a></td>
+							<td>
+								<a href="/CVE-2021-25740">CVE-2021-25740</a><br />
+								<a href="/CVE-2020-8562">CVE-2020-8562</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/kubelet">kubelet</a>, </span>
+								<span class="no-wrap"><a href="/package/kube-scheduler">kube-scheduler</a>, </span>
+								<span class="no-wrap"><a href="/package/kube-apiserver">kube-apiserver</a>, </span>
+								<span class="no-wrap"><a href="/package/kube-controller-manager">kube-controller-manager</a>, </span>
+								<span class="no-wrap"><a href="/package/kube-proxy">kube-proxy</a></span>
+							</td>
+							<td>1.23.0-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2091">AVG-2091</a></td>
+							<td>
+								<a href="/CVE-2021-35196">CVE-2021-35196</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/manuskript">manuskript</a></span>
+							</td>
+							<td>0.12.0-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2089">AVG-2089</a></td>
+							<td>
+								<a href="/CVE-2021-29063">CVE-2021-29063</a>
+							</td>
+							<td cl100 81516  100 81516    0     0   315k      0 --:--:-- --:--:-- --:--:--  315k100 81516  100 81516    0     0   315k      0 --:--:-- --:--:-- --:--:--  314k
+ass="wrap">
+								<span class="no-wrap"><a href="/package/python-mpmath">python-mpmath</a></span>
+							</td>
+							<td>1.2.1-5</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2021">AVG-2021</a></td>
+							<td>
+								<a href="/CVE-2020-17541">CVE-2020-17541</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/lib32-libjpeg6-turbo">lib32-libjpeg6-turbo</a></span>
+							</td>
+							<td>1.5.3-2</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-2020">AVG-2020</a></td>
+							<td>
+								<a href="/CVE-2020-17541">CVE-2020-17541</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/libjpeg6-turbo">libjpeg6-turbo</a></span>
+							</td>
+							<td>1.5.3-2</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1896">AVG-1896</a></td>
+							<td>
+								<a href="/CVE-2021-30219">CVE-2021-30219</a><br />
+								<a href="/CVE-2021-30218">CVE-2021-30218</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/samurai">samurai</a></span>
+							</td>
+							<td>1.2-2</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1777">AVG-1777</a></td>
+							<td>
+								<a href="/CVE-2021-30046">CVE-2021-30046</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/vigra">vigra</a></span>
+							</td>
+							<td>1.11.1.r45+g8acd73a5-5</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1673">AVG-1673</a></td>
+							<td>
+								<a href="/CVE-2021-20269">CVE-2021-20269</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/kexec-tools">kexec-tools</a></span>
+							</td>
+							<td>2.0.21-1</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-1370">AVG-1370</a></td>
+							<td>
+								<a href="/CVE-2020-22083">CVE-2020-22083</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/python-jsonpickle">python-jsonpickle</a></span>
+							</td>
+							<td>1.5.2-3</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td><a href="/AVG-366">AVG-366</a></td>
+							<td>
+								<a href="/CVE-2017-11331">CVE-2017-11331</a>
+							</td>
+							<td class="wrap">
+								<span class="no-wrap"><a href="/package/vorbis-tools">vorbis-tools</a></span>
+							</td>
+							<td>1.4.2-2</td>
+							<td></td>
+							<td><span class="green">Low</span></td>
+							<td><span class="red">Vulnerable</span></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
