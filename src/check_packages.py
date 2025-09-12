@@ -4,8 +4,8 @@ def main():
     packages=subprocess.run(['pacman','-Q'], capture_output=True, text=True)
     cves= subprocess.run(['curl',
                           'https://security.archlinux.org'], capture_output=True, text=True)
-    vulnerable_packages=[];
-    fixes_available=[];
+    vulnerable_packages=[]
+    fixes_available=[]
     cve_entries = deserialize(cves.stdout)
     for entry in cve_entries:
             if entry.name_version in packages.stdout.splitlines():
@@ -18,14 +18,14 @@ def main():
         fix_vulnerable = input().strip().lower()
         if fix_vulnerable == "" or fix_vulnerable in ["y", "yes"]:
             os.system(f"sudo pacman -S <affected_packages")
-    else: 
+    if len(vulnerable_packages)>0:
         print(f"{len(vulnerable_packages)} affected packages without fix available. List[L/n]?")
         list_vulnerable=input().strip().lower()
         if list_vulnerable=="" or list_vulnerable=="l":
             for e in vulnerable_packages:
-                print(f"{e} affected")
+                print(e)
 
-
+    
           
 def deserialize(content):
     import logging
