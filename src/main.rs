@@ -1,4 +1,5 @@
 use chrono::Local;
+use serde::ser::Error;
 use std::{
     fs::{File, OpenOptions},
     io::Write,
@@ -37,12 +38,11 @@ pub fn get_aur_helper() -> &'static str {
 pub fn run_command(line: &str, path: &str) -> Result<(), Box<dyn std::error::Error>> {
     let file = std::fs::read_to_string(path)?;
     if !file.contains(line) {
-        let mut echo_command = Command::new("sudo");
-        echo_command
+        Command::new("sudo")
             .arg("sh")
             .arg("-c")
-            .arg(format!("echo '{}' >> {}", line, path));
-        echo_command.status()?;
+            .arg(format!("echo '{}' >> {}", line, path))
+            .status()?;
     }
     Ok(())
 }
@@ -80,11 +80,61 @@ fn generate_logname() -> String {
     format!("audit_{}.md", date)
 }
 
-//TODO: before implementation test hardend_malloc to check for issues and chrashes(seems to crash
-//frequently with firefox, docker steam and wine)
-// TODO: Function that lets the user either decide per package case if hardend_malloc should be
-// used or not(depending on installed_pkgs)
-pub fn harden_memory(log: &mut File, aur_helper: &str) {}
+//TODO what if the installations fail? retry? evaluate options more
+pub fn harden_memory(log: &mut File, aur_helper: &str) -> Result<(), String> {
+    if aur_helper != "none" {
+        match Command::new(aur_helper)
+            .args(["-S", "hardened_malloc"])
+            .status()
+        {
+            Ok(status) if status.success() => {
+                let _ = writeln!(log, "installed hardened_malloc");
+                Ok(())
+            }
+            Ok(_) => {
+                let _ = writeln!(log, "memory hardening via aur helper failed: non-zero exit");
+                Err("AUR helper installation failed".to_string())
+            }
+            Err(error) => {
+                let _ = writeln!(log, "memory hardening via aur helper failed - {}", error);
+                Err(format!("AUR helper command error: {}", error))
+            }
+        }
+    } else {
+        //TODO look into adding a loadingbar? could be interestion to look into multithreading
+        println!("no aur helper found, using makepkg, this takes longer");
+        match Command::new("git")
+            .args(["clone", "https://aur.archlinux.org/hardened_malloc.git"])
+            .status()
+        {
+            Ok(status) if status.success() => {
+                std::env::set_current_dir("hardened_malloc");
+                match Command::new("makepkg").arg("-sri").status() {
+                    Ok(compiled) if compiled.success() => {
+                        let _ = writeln!(log, "hardened_malloc installed via makepkg");
+                        Ok(())
+                    }
+                    Ok(_) => {
+                        let _ = writeln!(log, "makepkg failed: non-zero exit");
+                        Err("makepkg failed non-zero exit".to_string())
+                    }
+                    Err(error) => {
+                        let _ = writeln!(log, "makepkg failed {}", error);
+                        Err(format!("Makepkg errors: {}", error))
+                    }
+                }
+            }
+            Ok(_) => {
+                let _ = writeln!(log, "failed to clone repo: non zero exit");
+                Err("failed to clone repo: non zero exit".to_string())
+            }
+            Err(error) => {
+                let _ = writeln!(log, "failed to clone hardened_malloc: {}", error);
+                Err(format!("failed to clone: {}", error))
+            }
+        }
+    }
+}
 //TODO reencrypt the boot drive -> needs test env!
 pub fn encrypt_drive(audit: &mut File) {}
 
