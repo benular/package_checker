@@ -16,7 +16,7 @@ fn main() {
             return; //smt like break available?
         }
     };
-    let aur_helper:&str=get_aur_helper();
+    harden_memory(&mut audit, get_aur_helper());
 
     // try to run the python file? else reimplement
     // let installed_pkgs=Command::new("pacman").arg("-Q").output();
@@ -24,15 +24,15 @@ fn main() {
     setup_user(&mut audit);
 }
 
-pub fn get_aur_helper()-> &'static str {
+pub fn get_aur_helper() -> &'static str {
     match Command::new("yay").arg("-V").output() {
-        Ok(output) if output.status.success()=>"yay",
+        Ok(output) if output.status.success() => "yay",
         _ => match Command::new("paru").arg("-V").output() {
-            Ok(output) if output.status.success()=>"paru",   
-           _ => "none"
-        }   
+            Ok(output) if output.status.success() => "paru",
+            _ => "none",
+        },
     }
-} 
+}
 
 pub fn run_command(line: &str, path: &str) -> Result<(), Box<dyn std::error::Error>> {
     let file = std::fs::read_to_string(path)?;
@@ -84,9 +84,7 @@ fn generate_logname() -> String {
 //frequently with firefox, docker steam and wine)
 // TODO: Function that lets the user either decide per package case if hardend_malloc should be
 // used or not(depending on installed_pkgs)
-pub fn harden_memory(log:&mut File) {
-    let aur_helper_installed:bool=
-}
+pub fn harden_memory(log: &mut File, aur_helper: &str) {}
 //TODO reencrypt the boot drive -> needs test env!
 pub fn encrypt_drive(audit: &mut File) {}
 
