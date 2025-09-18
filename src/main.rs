@@ -1,7 +1,7 @@
 use chrono::Local;
 use serde::ser::Error;
 use std::{
-    fs::{File, OpenOptions},
+    fs::{self, File, OpenOptions},
     io::Write,
     process::Command,
 };
@@ -79,59 +79,37 @@ fn generate_logname() -> String {
     let date = Local::now().format("%Y-%m-%d").to_string();
     format!("audit_{}.md", date)
 }
-
-//TODO what if the installations fail? retry? evaluate options more
 pub fn harden_memory(log: &mut File, aur_helper: &str) -> Result<(), String> {
-    if aur_helper != "none" {
-        match Command::new(aur_helper)
-            .args(["-S", "hardened_malloc"])
-            .status()
-        {
-            Ok(status) if status.success() => {
-                let _ = writeln!(log, "installed hardened_malloc");
-                Ok(())
-            }
-            Ok(_) => {
-                let _ = writeln!(log, "memory hardening via aur helper failed: non-zero exit");
-                Err("AUR helper installation failed".to_string())
-            }
-            Err(error) => {
-                let _ = writeln!(log, "memory hardening via aur helper failed - {}", error);
-                Err(format!("AUR helper command error: {}", error))
-            }
-        }
-    } else {
-        //TODO look into adding a loadingbar? could be interestion to look into multithreading
-        println!("no aur helper found, using makepkg, this takes longer");
-        match Command::new("git")
-            .args(["clone", "https://aur.archlinux.org/hardened_malloc.git"])
-            .status()
-        {
-            Ok(status) if status.success() => {
-                std::env::set_current_dir("hardened_malloc");
-                match Command::new("makepkg").arg("-sri").status() {
-                    Ok(compiled) if compiled.success() => {
-                        let _ = writeln!(log, "hardened_malloc installed via makepkg");
-                        Ok(())
-                    }
-                    Ok(_) => {
-                        let _ = writeln!(log, "makepkg failed: non-zero exit");
-                        Err("makepkg failed non-zero exit".to_string())
-                    }
-                    Err(error) => {
-                        let _ = writeln!(log, "makepkg failed {}", error);
-                        Err(format!("Makepkg errors: {}", error))
-                    }
+    //TODO look into adding a loadingbar? could be interestion to look into multithreading
+    println!("no aur helper found, using makepkg, this takes longer");
+    match Command::new("git")
+        .args(["clone", "https://aur.archlinux.org/hardened_malloc.git"])
+        .status()
+    {
+        Ok(status) if status.success() => {
+            std::env::set_current_dir("hardened_malloc");
+            match Command::new("makepkg").arg("-sri").status() {
+                Ok(compiled) if compiled.success() => {
+                    let _ = writeln!(log, "hardened_malloc installed via makepkg");
+                    Ok(())
+                }
+                Ok(_) => {
+                    let _ = writeln!(log, "makepkg failed: non-zero exit");
+                    Err("makepkg failed non-zero exit".to_string())
+                }
+                Err(error) => {
+                    let _ = writeln!(log, "makepkg failed {}", error);
+                    Err(format!("Makepkg errors: {}", error))
                 }
             }
-            Ok(_) => {
-                let _ = writeln!(log, "failed to clone repo: non zero exit");
-                Err("failed to clone repo: non zero exit".to_string())
-            }
-            Err(error) => {
-                let _ = writeln!(log, "failed to clone hardened_malloc: {}", error);
-                Err(format!("failed to clone: {}", error))
-            }
+        }
+        Ok(_) => {
+            let _ = writeln!(log, "failed to clone repo: non zero exit");
+            Err("failed to clone repo: non zero exit".to_string())
+        }
+        Err(error) => {
+            let _ = writeln!(log, "failed to clone hardened_malloc: {}", error);
+            Err(format!("failed to clone: {}", error))
         }
     }
 }
@@ -139,4 +117,52 @@ pub fn harden_memory(log: &mut File, aur_helper: &str) -> Result<(), String> {
 pub fn encrypt_drive(audit: &mut File) {}
 
 // TODO install Linux_kernel_hardened, set it to default in bootloader conf (grub or systemd?)
-pub fn harden_kernel() {}
+pub fn install_hardened_kernel(log: &mut File) -> Result<(), String> {
+    match Command::new("pacman")
+        .args(["-S", "linux_hardened"])
+        .status()
+    {
+        Ok(status) if status.success() => {
+            let _ = writeln!(log, "hardened kernel installed");
+            Ok(())
+        }
+        Ok(_) => {
+            let _ = writeln!(log, "linux_hardened installation failed: non-zero exit ");
+            Err("linux_hardened installtation failed: non-zero exit".to_string())
+        }
+        Err(error) => {
+            let _ = writeln!(log, "linux_hardened installation failed {}", error);
+            Err(format!("linux_hardened installtation failed: {}", error))
+        }
+    }
+}
+
+pub fn configure_hardened_kernel(log: &mut File) -> Result<(), String> {
+    // restrict access to kernel pointers
+    match Command::new("cat")
+        .arg("/ect/sysctl.d/51-kptr-restrict.conf")
+        .status()
+    {
+        Ok(status) if status.success() => {
+            // unwrap panics on error-> pattern matching would be more resiliant
+            let file = fs::read_to_string("/etc/sysctl.d/51-kptr-restrict.conf").unwrap();
+            let modified = file.replace("kernel.kptr_restrict=0", "kernel.kptr_restrict=1");
+            Ok(())
+        }
+        Ok(_) => {
+            let _ = writeln!(log, "linux_hardened installation failed: non-zero exit ");
+            Err("linux_hardened installtation failed: non-zero exit".to_string())
+        }
+        Err(status) => {
+            let _ = writeln!(
+                log,
+                "failed to cat /ect/sysctl.d/51-kptr-restrict.conf {}",
+                status
+            );
+            Err(format!(
+                "failed to cat /etc/sysctl.d/51-kptr-restrict.conf: {}",
+                status
+            ))
+        }
+    }
+}
