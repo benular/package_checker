@@ -3,7 +3,7 @@ use serde::ser::Error;
 use std::{
     fs::{self, File, OpenOptions},
     io::Write,
-    process::Command,
+    process::{Command, Output},
 };
 fn main() {
     let mut audit = match OpenOptions::new()
@@ -17,22 +17,12 @@ fn main() {
             return; //smt like break available?
         }
     };
-    harden_memory(&mut audit, get_aur_helper());
+    harden_memory(&mut audit);
 
     // try to run the python file? else reimplement
     // let installed_pkgs=Command::new("pacman").arg("-Q").output();
     // Setup User Best Practices
     setup_user(&mut audit);
-}
-
-pub fn get_aur_helper() -> &'static str {
-    match Command::new("yay").arg("-V").output() {
-        Ok(output) if output.status.success() => "yay",
-        _ => match Command::new("paru").arg("-V").output() {
-            Ok(output) if output.status.success() => "paru",
-            _ => "none",
-        },
-    }
 }
 
 pub fn run_command(line: &str, path: &str) -> Result<(), Box<dyn std::error::Error>> {
@@ -79,9 +69,8 @@ fn generate_logname() -> String {
     let date = Local::now().format("%Y-%m-%d").to_string();
     format!("audit_{}.md", date)
 }
-pub fn harden_memory(log: &mut File, aur_helper: &str) -> Result<(), String> {
+pub fn harden_memory(log: &mut File) -> Result<(), String> {
     //TODO look into adding a loadingbar? could be interestion to look into multithreading
-    println!("no aur helper found, using makepkg, this takes longer");
     match Command::new("git")
         .args(["clone", "https://aur.archlinux.org/hardened_malloc.git"])
         .status()
@@ -113,9 +102,6 @@ pub fn harden_memory(log: &mut File, aur_helper: &str) -> Result<(), String> {
         }
     }
 }
-//TODO reencrypt the boot drive -> needs test env!
-pub fn encrypt_drive(audit: &mut File) {}
-
 // TODO install Linux_kernel_hardened, set it to default in bootloader conf (grub or systemd?)
 pub fn install_hardened_kernel(log: &mut File) -> Result<(), String> {
     match Command::new("pacman")
@@ -137,8 +123,9 @@ pub fn install_hardened_kernel(log: &mut File) -> Result<(), String> {
     }
 }
 
-pub fn configure_hardened_kernel(log: &mut File) -> Result<(), String> {
+pub fn restict_kptr(log: &mut File) -> Result<(), String> {
     // restrict access to kernel pointers
+    // pattern matching stupid in this case,
     match Command::new("cat")
         .arg("/ect/sysctl.d/51-kptr-restrict.conf")
         .status()
@@ -146,11 +133,11 @@ pub fn configure_hardened_kernel(log: &mut File) -> Result<(), String> {
         Ok(status) if status.success() => {
             // unwrap panics on error-> pattern matching would be more resiliant
             let file = fs::read_to_string("/etc/sysctl.d/51-kptr-restrict.conf").unwrap();
-            let modified = file.replace("kernel.kptr_restrict=0", "kernel.kptr_restrict=1");
+            file.replace("kernel.kptr_restrict=0", "kernel.kptr_restrict=1");
             Ok(())
         }
         Ok(_) => {
-            let _ = writeln!(log, "linux_hardened installation failed: non-zero exit ");
+            writeln!(log, "linux_hardened installation failed: non-zero exit ");
             Err("linux_hardened installtation failed: non-zero exit".to_string())
         }
         Err(status) => {
@@ -164,5 +151,40 @@ pub fn configure_hardened_kernel(log: &mut File) -> Result<(), String> {
                 status
             ))
         }
+    }
+}
+pub fn get_aur_helper() -> String {
+    let aur_helpers = ["yay", "paru", "trizen", "pikaur", "aurman", "pakku"];
+
+    for helper in &aur_helpers {
+        if Command::new("which").arg(helper).status().is_ok() {
+            return helper.to_string();
+        }
+    }
+
+    "none".to_string()
+}
+
+fn install_kernel_runtime_guard(log: &mut File) -> Result<(), String> {
+    let aur_helper = get_aur_helper();
+    if &aur_helper != "none" {
+        match Command::new(aur_helper).args(["-S", " lkrg-dkms"]).status() {
+            Ok(status) if status.success() => {
+                let _ = writeln!(log, "installed Linux Kernel Runtime Guard");
+                Ok(())
+            }
+            Ok(_) => Ok(()),
+            Err(status) => {
+                let _ = writeln!(
+                    log,
+                    "aur helper lkrg-dkms installation failed with: {} ",
+                    status
+                );
+                Ok(())
+            }
+        }
+    } else {
+        let _ = writeln!(log, "no aur helper installed");
+        Ok(())
     }
 }
