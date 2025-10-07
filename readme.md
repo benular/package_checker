@@ -1,2 +1,1 @@
-# Security Checker
-checks installed packages and installes fixes when installed packages are affected
+automaticly implements some of the best practises from https://wiki.archlinux.org/title/Security
