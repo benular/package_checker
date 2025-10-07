@@ -1,10 +1,34 @@
 use chrono::Local;
-use serde::ser::Error;
 use std::{
     fs::{self, File, OpenOptions},
     io::Write,
-    process::{Command, Output},
+    process::Command,
 };
+mod configure_firewall;
+
+fn execute_command_with_logging(
+    log: &mut File,
+    command: &str,
+    args: &[&str],
+    success_msg: &str,
+    error_msg: &str,
+) -> Result<(), String> {
+    match Command::new(command).args(args).status() {
+        Ok(status) if status.success() => {
+            let _ = writeln!(log, "{}", success_msg);
+            Ok(())
+        }
+        Ok(_) => {
+            let _ = writeln!(log, "{}: command returned non-zero exit code", error_msg);
+            Err(error_msg.to_string())
+        }
+        Err(e) => {
+            let _ = writeln!(log, "{}: failed to execute command: {}", error_msg, e);
+            Err(format!("{}: {}", error_msg, e))
+        }
+    }
+}
+
 fn main() {
     let mut audit = match OpenOptions::new()
         .create(true)
@@ -13,16 +37,44 @@ fn main() {
     {
         Ok(file) => file,
         Err(error) => {
-            eprint!("failed to create new audit {}", error);
-            return; //smt like break available?
+            eprintln!("failed to create new audit {}", error);
+            return;
         }
     };
-    harden_memory(&mut audit);
 
-    // try to run the python file? else reimplement
-    // let installed_pkgs=Command::new("pacman").arg("-Q").output();
-    // Setup User Best Practices
+    println!("Starting Arch Linux security hardening...");
+    let _ = writeln!(audit, "=== Arch Linux Security Hardening Started ===");
+
+    // Memory hardening
+    if let Err(e) = harden_memory(&mut audit) {
+        eprintln!("Memory hardening failed: {}", e);
+    }
+
+    // Install hardened kernel
+    if let Err(e) = install_hardened_kernel(&mut audit) {
+        eprintln!("Hardened kernel installation failed: {}", e);
+    }
+
+    // Restrict kernel pointers
+    if let Err(e) = restict_kptr(&mut audit) {
+        eprintln!("Kernel pointer restriction failed: {}", e);
+    }
+
+    // Install Linux Kernel Runtime Guard
+    if let Err(e) = install_kernel_runtime_guard(&mut audit) {
+        eprintln!("LKRG installation failed: {}", e);
+    }
+
+    // Setup user security best practices
     setup_user(&mut audit);
+
+    // Configure firewall
+    if let Err(e) = configure_firewall::setup_firewall(&mut audit) {
+        eprintln!("Firewall configuration failed: {}", e);
+    }
+
+    let _ = writeln!(audit, "=== Security hardening completed ===");
+    println!("Security hardening completed. Check {} for details.", generate_logname());
 }
 
 pub fn run_command(line: &str, path: &str) -> Result<(), Box<dyn std::error::Error>> {
@@ -76,7 +128,7 @@ pub fn harden_memory(log: &mut File) -> Result<(), String> {
         .status()
     {
         Ok(status) if status.success() => {
-            std::env::set_current_dir("hardened_malloc");
+            let _ = std::env::set_current_dir("hardened_malloc");
             match Command::new("makepkg").arg("-sri").status() {
                 Ok(compiled) if compiled.success() => {
                     let _ = writeln!(log, "hardened_malloc installed via makepkg");
@@ -133,11 +185,11 @@ pub fn restict_kptr(log: &mut File) -> Result<(), String> {
         Ok(status) if status.success() => {
             // unwrap panics on error-> pattern matching would be more resiliant
             let file = fs::read_to_string("/etc/sysctl.d/51-kptr-restrict.conf").unwrap();
-            file.replace("kernel.kptr_restrict=0", "kernel.kptr_restrict=1");
+            let _ = file.replace("kernel.kptr_restrict=0", "kernel.kptr_restrict=1");
             Ok(())
         }
         Ok(_) => {
-            writeln!(log, "linux_hardened installation failed: non-zero exit ");
+            let _ = writeln!(log, "linux_hardened installation failed: non-zero exit ");
             Err("linux_hardened installtation failed: non-zero exit".to_string())
         }
         Err(status) => {
